@@ -1,0 +1,51 @@
+@import url('https://cdn.jsdelivr.net/gh/neodgm/neodgm-webfont@latest/neodgm/style.css');
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-neon-green: #39ff14;
+  --color-pixel-pink: #ff00ff;
+  --color-bright-yellow: #ffff00;
+  --font-retro: 'Press Start 2P', 'DungGeunMo', monospace;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-retro);
+}
+
+@layer utilities {
+  .pixel-border {
+    border: 4px solid white;
+    border-radius: 0;
+  }
+  
+  .pixel-shadow {
+    box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+  }
+
+  .pixel-shadow-active {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+    transform: translate(4px, 4px);
+  }
+
+  .pixel-btn {
+    border: 4px solid white;
+    border-radius: 0;
+    box-shadow: 4px 4px 0px 0px rgba(255, 255, 255, 1);
+    transition: transform 0.1s;
+    cursor: pointer;
+  }
+
+  .pixel-btn:active {
+    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 1);
+    transform: translate(4px, 4px);
+  }
+}
