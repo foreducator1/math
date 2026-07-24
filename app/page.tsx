@@ -14,12 +14,20 @@ export default function Home() {
         </p>
       </div>
 
-      <Link href="/sieve">
-        <button className="pixel-btn bg-pixel-pink text-white px-8 py-4 text-xl flex items-center gap-3 hover:bg-opacity-90">
-          <Gamepad2 size={24} />
-          <span>START GAME</span>
-        </button>
-      </Link>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link href="/sieve">
+          <button className="pixel-btn bg-pixel-pink text-white px-8 py-4 text-xl flex items-center gap-3 hover:bg-opacity-90 w-full sm:w-auto justify-center">
+            <Gamepad2 size={24} />
+            <span>에라토스테네스의 체</span>
+          </button>
+        </Link>
+        <Link href="/equation-quiz">
+          <button className="pixel-btn bg-blue-600 text-white px-8 py-4 text-xl flex items-center gap-3 hover:bg-opacity-90 w-full sm:w-auto justify-center">
+            <Gamepad2 size={24} />
+            <span>일차방정식 퀴즈</span>
+          </button>
+        </Link>
+      </div>
 
       {/* 추가 설명을 위한 박스 예시 */}
       <div className="pixel-border p-6 max-w-lg mt-12 bg-gray-900 text-left">
