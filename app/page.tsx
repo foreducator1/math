@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Gamepad2 } from "lucide-react";
 
 export default function Home() {
@@ -13,10 +14,12 @@ export default function Home() {
         </p>
       </div>
 
-      <button className="pixel-btn bg-pixel-pink text-white px-8 py-4 text-xl flex items-center gap-3 hover:bg-opacity-90">
-        <Gamepad2 size={24} />
-        <span>START GAME</span>
-      </button>
+      <Link href="/sieve">
+        <button className="pixel-btn bg-pixel-pink text-white px-8 py-4 text-xl flex items-center gap-3 hover:bg-opacity-90">
+          <Gamepad2 size={24} />
+          <span>START GAME</span>
+        </button>
+      </Link>
 
       {/* 추가 설명을 위한 박스 예시 */}
       <div className="pixel-border p-6 max-w-lg mt-12 bg-gray-900 text-left">
